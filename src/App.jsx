@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 import Sidebar from './components/sidebar'
 import Form from './components/sidebarContent/form'
 import FormField from './components/sidebarContent/formField'
@@ -9,6 +11,10 @@ import educationIcon from '../public/book-solid.svg'
 import workIcon from '../public/briefcase-solid.svg'
 
 function App() {
+
+  const [generalFormContent, setGeneralFormContent] = useState({fullName:null,email:null,phoneNumber:null,homeAddress:null})
+  const [educationFormContent, setEducationFormContent] = useState([{schoolName:null,titleOfStudy:null,dateFrom:null,dateUntil:null}])
+  const [experienceFormContent, setExperienceFormContent] = useState([{companyName:null,positionTitle:null,location:null,responsibilities:null,dateFrom:null,dateUntil:null}])
 
   return (
     <>    
@@ -29,13 +35,13 @@ function App() {
         <FormField title='Company Name'/>
         <FormField title='Position Title'/>
         <FormField title='Location'/>
-        <FormField title='Responsibilities' type='textarea'/>
+        <FormField title='Responsibilities' type='textarea' maxLength={300}/>
         <FormField title='Date From' type='date'/>
         <FormField title='Date Until' type='date'/>
       </Form>
     </Sidebar>
     <Resume/>
-    </>
+     </> 
   )
 }
 
