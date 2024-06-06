@@ -1,11 +1,11 @@
-function FormButton({title='', callback, formContent}) {
+function FormButton({title='', callback, formContent, isOpened}) {
 
   function handleClick() {
     callback(formContent)
   }
 
   return (
-    <button onClick={handleClick}>{title}</button>
+    <button onClick={handleClick}>{title}</button> 
   )
 
 }

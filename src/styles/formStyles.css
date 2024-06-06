@@ -13,3 +13,7 @@ img {
 
   padding: 10px;
 }
+
+textarea {
+  resize: 'vertical'
+}

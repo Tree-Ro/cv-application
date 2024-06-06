@@ -1,31 +1,30 @@
 import { useState } from 'react'
 
-function FormField({title='', type='text', placeholder='', maxLength='16'}) {
-  const [fieldValue, setFieldvalue] = useState("That's a very good point")
+function FormField({title, type, placeholder, maxLength='16', inputValues, setInputValues}) {
 
   function handleChange(e) {
-    setFieldvalue(e.target.value)
+    let newInput = { ...inputValues }
+    newInput[title] = e.target.value 
+    setInputValues(newInput)
   }
 
-  const textAreaField = (
-    <textarea 
-    style={{ resize: 'vertical'}} 
-    placeholder={placeholder} 
-    maxLength={maxLength}
-    value={fieldValue}
-
-    onChange={handleChange}
-    />)
   const inputField = (
     <input 
     type={type} 
     placeholder={placeholder} 
     maxLength={maxLength}
-    value={fieldValue}
+    value={title in inputValues ? inputValues[title] : ''}
 
     onChange={handleChange}
-    />)
+  />)
+  const textAreaField = (
+    <textarea 
+    placeholder={placeholder} 
+    maxLength={maxLength}
+    value={title in inputValues ? inputValues[title] : ''}
 
+    onChange={handleChange}
+  />)
     
   return (
     <div className='form-field'>

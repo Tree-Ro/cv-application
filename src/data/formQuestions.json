@@ -1,0 +1,101 @@
+[
+  {
+    "title": "General",
+    "fields": [
+      {
+        "title": "Full Name",
+        "type": "text",
+        "placeholder": "ex. John Doe",
+        "maxLength": 16
+      },
+      {
+        "title": "Email",
+        "type": "email",
+        "placeholder": "ex. john.doe@gmail.com",
+        "maxLength": 25
+      },
+      {
+        "title": "Phone Number",
+        "type": "number",
+        "placeholder": "ex. 333-5555-22",
+        "maxLength": 16
+      },
+      {
+        "title": "Home Address",
+        "type": "text",
+        "placeholder": "15th Example Street",
+        "maxLength": 16
+      }
+    ]
+  },
+  {
+    "title": "Education",
+    "fields": [
+      {
+        "title": "School Name",
+        "type": "text",
+        "placeholder": "ex. Lund University",
+        "maxLength": 16
+      },
+      {
+        "title": "Title of Study",
+        "type": "text",
+        "placeholder": "ex. Computer Science",
+        "maxLength": 16
+      },
+      {
+        "title": "Date From",
+        "type": "date",
+        "placeholder": "",
+        "maxLength": 16
+      },
+      {
+        "title": "Date Until",
+        "type": "date",
+        "placeholder": "",
+        "maxLength": 16
+      }
+    ]
+  },
+  {
+    "title": "Experiences",
+    "fields": [
+      {
+        "title": "Company Name",
+        "type": "text",
+        "placeholder": "",
+        "maxLength": 16
+      },
+      {
+        "title": "Position Title",
+        "type": "text",
+        "placeholder": "",
+        "maxLength": 16
+      },
+      {
+        "title": "Location",
+        "type": "text",
+        "placeholder": "",
+        "maxLength": 16
+      },
+      {
+        "title": "Responsibilities",
+        "type": "textarea",
+        "placeholder": "",
+        "maxLength": 300
+      },
+      {
+        "title": "Date From",
+        "type": "date",
+        "placeholder": "",
+        "maxLength": 16
+      },
+      {
+        "title": "Date Until",
+        "type": "date",
+        "placeholder": "",
+        "maxLength": 16
+      }
+    ]
+  }
+]

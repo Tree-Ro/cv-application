@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import Sidebar from './components/sidebar'
 import Form from './components/sidebarContent/form'
-import FormField from './components/sidebarContent/formField'
+import JsonFormData from './data/formQuestions.json'
 
 import Resume from './components/resume'
 
@@ -16,29 +16,16 @@ function App() {
   const [educationFormContent, setEducationFormContent] = useState([{schoolName:null,titleOfStudy:null,dateFrom:null,dateUntil:null}])
   const [experienceFormContent, setExperienceFormContent] = useState([{companyName:null,positionTitle:null,location:null,responsibilities:null,dateFrom:null,dateUntil:null}])
 
+  const generalFormQuestions = JsonFormData[0]
+  const educationFormQuestions = JsonFormData[1]
+  const experiencesFormQuestions = JsonFormData[2]
+
   return (
     <>    
     <Sidebar>
-      <Form title='General' svgIcon={personIcon}>
-        <FormField title='Full Name' type='text' placeholder='ex. John Doe'/>
-        <FormField title='Email' type='email' placeholder='ex. john.doe@gmail.com' maxLength={25}/>
-        <FormField title='Phone Number' type='number' placeholder='ex. 333-5555-22'/>
-        <FormField title='Home Address' placeholder='15th Example Street'/>
-      </Form>
-      <Form title='Education' svgIcon={educationIcon}>
-        <FormField title='School Name' placeholder='ex. Lund University'/>
-        <FormField title='Title of Study' placeholder='ex. Computer Science'/>
-        <FormField title='Date From' type='date'/>
-        <FormField title='Date Until' type='date'/>
-      </Form>
-      <Form title='Experiences' svgIcon={workIcon}>
-        <FormField title='Company Name'/>
-        <FormField title='Position Title'/>
-        <FormField title='Location'/>
-        <FormField title='Responsibilities' type='textarea' maxLength={300}/>
-        <FormField title='Date From' type='date'/>
-        <FormField title='Date Until' type='date'/>
-      </Form>
+      <Form svgIcon={personIcon} formData={generalFormQuestions}/>
+      <Form svgIcon={educationIcon} formData={educationFormQuestions}/>
+      <Form svgIcon={workIcon} formData={experiencesFormQuestions}/>
     </Sidebar>
     <Resume/>
      </> 
