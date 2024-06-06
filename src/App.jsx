@@ -1,6 +1,8 @@
 import Sidebar from './components/sidebar'
-import Form from './components/form'
-import FormField from './components/formField'
+import Form from './components/sidebarContent/form'
+import FormField from './components/sidebarContent/formField'
+
+import Resume from './components/resume'
 
 import personIcon from '../public/user-solid.svg'
 import educationIcon from '../public/book-solid.svg'
@@ -15,7 +17,7 @@ function App() {
         <FormField title='Full Name' type='text' placeholder='ex. John Doe'/>
         <FormField title='Email' type='email' placeholder='ex. john.doe@gmail.com' maxLength={25}/>
         <FormField title='Phone Number' type='number' placeholder='ex. 333-5555-22'/>
-        <FormField title='Address' placeholder='15th Example Street'/>
+        <FormField title='Home Address' placeholder='15th Example Street'/>
       </Form>
       <Form title='Education' svgIcon={educationIcon}>
         <FormField title='School Name' placeholder='ex. Lund University'/>
@@ -26,11 +28,13 @@ function App() {
       <Form title='Experiences' svgIcon={workIcon}>
         <FormField title='Company Name'/>
         <FormField title='Position Title'/>
+        <FormField title='Location'/>
         <FormField title='Responsibilities' type='textarea'/>
         <FormField title='Date From' type='date'/>
         <FormField title='Date Until' type='date'/>
       </Form>
     </Sidebar>
+    <Resume/>
     </>
   )
 }

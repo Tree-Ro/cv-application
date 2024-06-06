@@ -6,8 +6,6 @@ function FormField({title='', type='text', placeholder='', maxLength='16'}) {
     placeholder={placeholder} 
     maxLength={maxLength}
     />)
-
-
   const inputField = (
     <input 
     type={type} 
@@ -15,6 +13,7 @@ function FormField({title='', type='text', placeholder='', maxLength='16'}) {
     maxLength={maxLength}
     />)
 
+    
   return (
     <div className='form-field'>
       <h3>{title}</h3>
