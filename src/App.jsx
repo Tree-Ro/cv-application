@@ -6,15 +6,15 @@ import JsonFormData from './data/formQuestions.json'
 
 import Resume from './components/resume'
 
-import personIcon from '../public/user-solid.svg'
-import educationIcon from '../public/book-solid.svg'
-import workIcon from '../public/briefcase-solid.svg'
+import personIcon from '/user-solid.svg'
+import educationIcon from '/book-solid.svg'
+import workIcon from '/briefcase-solid.svg'
 
 function App() {
 
-  const [generalFormContent, setGeneralFormContent] = useState({fullName:null,email:null,phoneNumber:null,homeAddress:null})
-  const [educationFormContent, setEducationFormContent] = useState([{schoolName:null,titleOfStudy:null,dateFrom:null,dateUntil:null}])
-  const [experienceFormContent, setExperienceFormContent] = useState([{companyName:null,positionTitle:null,location:null,responsibilities:null,dateFrom:null,dateUntil:null}])
+  const [generalResumeContent, setGeneralResumeContent] = useState({})
+  const [educationResumeContent, setEducationResumeContent] = useState([])
+  const [experienceResumeContent, setExperienceResumeContent] = useState([])
 
   const generalFormQuestions = JsonFormData[0]
   const educationFormQuestions = JsonFormData[1]
@@ -23,11 +23,11 @@ function App() {
   return (
     <>    
     <Sidebar>
-      <Form svgIcon={personIcon} formData={generalFormQuestions}/>
-      <Form svgIcon={educationIcon} formData={educationFormQuestions}/>
-      <Form svgIcon={workIcon} formData={experiencesFormQuestions}/>
+      <Form svgIcon={personIcon} formData={generalFormQuestions} setResumeContent={setGeneralResumeContent} resumeContent={generalResumeContent}/>
+      <Form svgIcon={educationIcon} formData={educationFormQuestions} setResumeContent={setEducationResumeContent} resumeContent={educationResumeContent}/>
+      <Form svgIcon={workIcon} formData={experiencesFormQuestions} setResumeContent={setExperienceResumeContent} resumeContent={experienceResumeContent}/>
     </Sidebar>
-    <Resume/>
+    <Resume forms={[generalResumeContent, educationResumeContent, experienceResumeContent]}/>
      </> 
   )
 }

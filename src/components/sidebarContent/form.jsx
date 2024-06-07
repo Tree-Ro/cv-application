@@ -2,12 +2,20 @@ import { useState } from 'react'
 import FormButton from './formButton' 
 import FormField from './formField'
 
-function Form({ svgIcon, formData }) {
+function Form({ svgIcon, formData, setResumeContent, resumeContent }) {
   const [isOpened, setIsOpened] = useState(false)
   const [inputValues, setInputValues] = useState({})
 
   function handleClick() {
     setIsOpened(!isOpened)
+  }
+
+  function addResumeContent(newContent) {
+    let newResumeContent = resumeContent
+    newResumeContent.push(newContent)
+
+    setResumeContent(newResumeContent)
+    setInputValues({})
   }
 
   return (
@@ -18,9 +26,14 @@ function Form({ svgIcon, formData }) {
       </div>
       {isOpened &&
         <>
+          {formData.title !== 'General' && resumeContent.map((item, index)=> (
+            <div key={index} className='added-item'>
+              <h4>{Object.values(item)[1] + ' - ' + Object.values(item)[0]}</h4> {/* Create a component out of this that allows you to edit the addition? */}
+            </div>
+          ))}
           {formData.fields.map((field, index) => (
             <FormField 
-              key={index}
+              key={field.title}
               title={field.title}
               type={field.type}
               placeholder={field.placeholder}
@@ -31,14 +44,16 @@ function Form({ svgIcon, formData }) {
             />
           ))}
           <FormButton 
-            title='Add' 
-            callback={console.log} 
-            formContent={'Added Content'} 
+            title='Add'
+
+            callback={formData.title === 'General' ? setResumeContent : addResumeContent} 
+            formContent={inputValues} 
           />
           <FormButton 
             title='Clear' 
-            callback={console.log} 
-            formContent={'Cleared Content'} 
+
+            callback={setInputValues} 
+            formContent={[]} 
           />
         </>
       }
