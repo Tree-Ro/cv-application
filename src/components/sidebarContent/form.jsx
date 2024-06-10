@@ -31,7 +31,7 @@ function Form({ svgIcon, formData, setResumeContent, resumeContent }) {
               <h4>{Object.values(item)[1] + ' - ' + Object.values(item)[0]}</h4> {/* Create a component out of this that allows you to edit the addition? */}
             </div>
           ))}
-          {formData.fields.map((field, index) => (
+          {formData.fields.map((field) => (
             <FormField 
               key={field.title}
               title={field.title}

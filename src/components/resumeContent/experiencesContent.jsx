@@ -1,22 +1,26 @@
-function ExperiencesContent({experienceFormContent=[]}) {
+function ExperiencesContent({ experienceFormContent }) {
 
-  const experiences = experienceFormContent
-
+  const experiences = experienceFormContent 
+  console.log(experiences)
 
   return (
     <>
       {experiences.map((experience)=> {
+        const { companyName, positionTitle, location, responsibilities, dateFrom, dateUntil } = experience
+        console.log({ companyName, positionTitle, location, responsibilities, dateFrom, dateUntil })
+        const key = `${companyName} + ${positionTitle}`
+
         return (
-          <div className='experiences'>
+          <div key={key} className='experiences'>
             <div>
-              <p>{experience.dateFrom + ' - ' + experience.dateUntil}</p>
-              <p>{experience.location}</p>
+              <p>{dateFrom ? dateFrom : 'N/A' + ' - ' + dateUntil ? dateUntil : 'N/A'}</p>
+              <p>{location ? location : 'N/A'}</p>
             </div>
 
             <div>
-              <h2><b>{experience.positionTitle}</b></h2>
-              <h3>{experience.companyName}</h3>
-              <p>{experience.responsibilities}</p>
+              <h2><b>{positionTitle ? positionTitle : 'N/A'}</b></h2>
+              <h3>{companyName ? companyName : 'N/A'}</h3>
+              <p>{responsibilities ? responsibilities : 'N/A'}</p>
             </div>
           </div>
         )

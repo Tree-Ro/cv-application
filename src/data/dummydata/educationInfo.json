@@ -1,0 +1,16 @@
+[
+  {
+    "titleOfStudy": "Bachelor of Science in Computer Science",
+    "schoolName": "University of Example",
+    "dateFrom": "2018",
+    "dateUntil": "2022",
+    "homeAddress": "123 University St, Example City"
+  },
+  {
+    "titleOfStudy": "Master of Business Administration",
+    "schoolName": "Business School of Example",
+    "dateFrom": "2023",
+    "dateUntil": "2025",
+    "homeAddress": "456 Business St, Business Town"
+  }
+]

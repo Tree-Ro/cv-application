@@ -1,0 +1,18 @@
+[
+  {
+    "companyName": "Example Company 1",
+    "positionTitle": "Software Engineer",
+    "location": "New York, USA",
+    "responsibilities": "Developed web applications using React.js and Node.js.",
+    "dateFrom": "2019",
+    "dateUntil": "2021"
+  },
+  {
+    "companyName": "Example Company 2",
+    "positionTitle": "Product Manager",
+    "location": "San Francisco, USA",
+    "responsibilities": "Managed product roadmap and collaborated with engineering teams.",
+    "dateFrom": "2021",
+    "dateUntil": "Present"
+  }
+]

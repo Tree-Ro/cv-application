@@ -1,4 +1,4 @@
-function FormButton({title='', callback, formContent, isOpened}) {
+function FormButton({title='', callback, formContent}) {
 
   function handleClick() {
     callback(formContent)

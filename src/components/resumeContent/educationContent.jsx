@@ -1,26 +1,31 @@
-function EducationContent({educationFormContent}) {
-
-  const educations = educationFormContent
+function EducationContent({ educationFormContent }) {
+  // Ensure educationFormContent is always an array
+  const educations = Array.isArray(educationFormContent) ? educationFormContent : [];
 
   return (
     <>
-    {educations.map((education)=> {
-      return(
-      <div className='education'>
-        <div>
-          <p className='education-duration'>{education.dateFrom + ' - ' + education.dateUntil}</p>
-          <p className='education-location'>{education.homeAddress}</p>
-        </div>
+      {educations.map((education) => {
+        const { titleOfStudy, schoolName, dateFrom, dateUntil, homeAddress } = education;
+        const key = `${titleOfStudy}-${schoolName}`;
 
-        <div>
-        <h2 className='education-title'><b>{education.titleOfStudy}</b></h2>
-        <h3 className='education-school-name'>{education.schoolName}</h3>
-        </div>
-      </div>
-    )})}
+        return (
+          <div key={key} className='education'>
+            <div>
+              <p className='education-duration'>
+                {dateFrom ? dateFrom : 'N/A'} - {dateUntil ? dateUntil : 'N/A'}
+              </p>
+              <p className='education-location'>{homeAddress ? homeAddress : 'N/A'}</p>
+            </div>
+
+            <div>
+              <h2 className='education-title'><b>{titleOfStudy ? titleOfStudy : 'N/A'}</b></h2>
+              <h3 className='education-school-name'>{schoolName ? schoolName : 'N/A'}</h3>
+            </div>
+          </div>
+        );
+      })}
     </>
-  )
-
+  );
 }
 
-export default EducationContent
+export default EducationContent;
