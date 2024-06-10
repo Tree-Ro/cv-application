@@ -3,7 +3,6 @@
   grid-template-rows: max-content max-content 1fr;
 
   width: 100%;
-  height: minmax(max-content, 1400px);
   margin: 25px;
 
   box-shadow: gray 3px 3px 15px;
@@ -78,11 +77,16 @@ section > h2 {
   grid-gap: 5px;
 }
 
+@media only screen and (max-width: 785px)  {
+    .general-info {
+      grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
 @media print {
 
   header.general-content {
     color: black;
-    background-color: var(--main-colour);
   }
 
   .resume-wrapper {

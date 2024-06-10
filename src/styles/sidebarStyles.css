@@ -87,10 +87,6 @@ textarea {
 
   grid-gap: 20px;
   border-radius: 10px;
-
-  animation: fallOut 1s forwards;
-  transform-origin: top;
-  transform: scaleY(1);
 }
 .form-field {
   display: flex;
@@ -124,17 +120,6 @@ textarea {
 }
 .form-buttons button:hover {
   transform: scale(1.05);
-}
-
-
-@keyframes fallOut {
-  0% {
-    transform: scaleY(0);
-  }  
-
-  100%{
-    transform: scaleY(1);
-  }
 }
 
 @media print {
