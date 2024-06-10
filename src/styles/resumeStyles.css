@@ -1,6 +1,6 @@
 .resume-wrapper {
   display: grid;
-  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-rows: max-content max-content 1fr;
 
   width: 100%;
   height: minmax(max-content, 1400px);
