@@ -32,11 +32,11 @@ function Form({ svgIcon, formData, setResumeContent, resumeContent }) {
       {isOpened &&
         <>
           {formData.title !== 'General' && 
-              <AddedItems resumeContent={resumeContent} setResumeContent={setResumeContent}/>
+              <AddedItems resumeMethods={[resumeContent, setResumeContent]} inputMethods={[inputValues, setInputValues]}/>
           }
-          {formData.fields.map((field) => (
+          {formData.fields.map((field, index) => (
             <FormField 
-              key={field.title}
+              key={index}
               title={field.title}
               type={field.type}
               placeholder={field.placeholder}

@@ -5,11 +5,10 @@ function EducationContent({ educationFormContent }) {
   return (
     <>
       {educations.map((education) => {
-        const { titleOfStudy, schoolName, dateFrom, dateUntil, homeAddress } = education;
-        const key = `${titleOfStudy}-${schoolName}`;
+        const { titleOfStudy, schoolName, dateFrom, dateUntil, homeAddress, id } = education;
 
         return (
-          <div key={key} className='education'>
+          <div key={id} className='education'>
             <div>
               <p className='education-duration'>
                 {dateFrom ? dateFrom : 'N/A'} - {dateUntil ? dateUntil : 'N/A'}
