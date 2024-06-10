@@ -1,8 +1,13 @@
+import SavePageAsPDFButton from './sidebarContent/saveAsPdfButton'
+
 function Sidebar({ children }) {
 
   return (
     <div className='sidebar'>
-      {children}
+      <div className='sidebar-form'>
+        {children}
+      </div>
+      <SavePageAsPDFButton />
     </div>
   )
 }

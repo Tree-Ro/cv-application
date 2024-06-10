@@ -1,8 +1,26 @@
 .sidebar {
   display: grid;
-  grid-gap: 15px;
-  grid-template-rows: max-content max-content max-content ;
+  grid-gap: 25px;
+  grid-template-rows: max-content max-content;
+}
+.sidebar .save-button {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 5px;
+  justify-self: center;
+  background-color: var(--main-colour);
+  color: white;
+  font-size: 1.2rem;
 
+  transition: transform 0.2s;
+}
+.sidebar .save-button:hover { 
+  transform: scale(1.05);
+}
+.sidebar-form {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-rows: max-content max-content max-content;
   padding: 25px;
 }
 
