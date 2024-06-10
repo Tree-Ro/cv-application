@@ -77,3 +77,15 @@ section > h2 {
   margin: 10px;
   grid-gap: 5px;
 }
+
+@media print {
+
+  header.general-content {
+    color: black;
+    background-color: var(--main-colour);
+  }
+
+  .resume-wrapper {
+    box-shadow: none;
+  }
+}
