@@ -22,11 +22,15 @@ export default function AddedItems({ resumeMethods, inputMethods }) {
       {resumeContent.map((item)=> {
         const values = Object.values(item)
         return(
-        <div key={item.id}>
-          <p><b>{values[0]}</b></p>
-          <p>{values[1]}</p>
-          <img src="./trash-solid.svg" alt="Remove Item Icon" onClick={() => handleDelete(item.id)}/>
-          <img src="./pen-to-square-solid.svg" alt="Edit item Icon" onClick={() => {handleEdit(item.id)}} />
+        <div key={item.id} className='added-item'>
+          <div className='item-description'>
+            <p><b>{values[0]}</b></p>
+            <p>{values[1]}</p>
+          </div>
+          <div className='item-actions'>
+            <img src="./trash-solid.svg" alt="Remove Item Icon" onClick={() => handleDelete(item.id)}/>
+            <img src="./pen-to-square-solid.svg" alt="Edit item Icon" onClick={() => {handleEdit(item.id)}} />
+          </div>
         </div>
       )})}
     </>

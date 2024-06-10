@@ -1,19 +1,117 @@
+.sidebar {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-rows: max-content max-content max-content ;
+
+  padding: 25px;
+}
+
+
 img {
   width: 32px;
   height: auto;
 }
-
-.form-header {
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  
-  grid-gap: 15px;
-
-  place-items: center;
-
-  padding: 10px;
+textarea {
+  min-width: 100%;
+  max-width: 500px;
 }
 
-textarea {
-  resize: 'vertical'
+
+.form {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 5px;
+}
+.form-header {
+  background-color: white;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.15);
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 20px;
+
+  align-items: center;
+
+  padding: 15px;
+  border-radius: 15px 15px 0px 0px;
+  user-select: none;
+  cursor: pointer;
+
+  transition: transform 0.4s;
+}
+.form-header:hover {
+  transform: scale(1.02);
+}
+.added-item {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+}
+.added-item img {
+  cursor: pointer;
+  opacity: 0.3;
+  height: 25px;
+  width: 25px;
+  align-self: center;
+  transition: transform 0.2s;
+}
+.added-item img:hover {
+  transform: scale(1.1);
+}
+.added-item .item-actions {
+  display: flex;
+  gap: 15px;
+}
+.form-content {
+  display: grid;
+  padding: 25px;
+
+  grid-gap: 20px;
+  border-radius: 10px;
+
+  animation: fallOut 1s forwards;
+  transform-origin: top;
+  transform: scaleY(1);
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.form-field input {
+  padding: 5px;
+  border: solid var(--text-colour-night) 2px;
+  border-radius: 5px;
+}
+.form-field textarea {
+  padding: 5px;
+  border: solid var(--text-colour-night) 2px;
+  border-radius: 5px;
+}
+.form-buttons {
+  display: grid;
+  grid-auto-flow: column;
+
+  grid-gap: 20px;
+}
+.form-buttons button {
+  border: solid var(--text-colour-night) 3px;
+  padding: 3px;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: transform 0.2s;
+}
+.form-buttons button:hover {
+  transform: scale(1.05);
+}
+
+
+@keyframes fallOut {
+  0% {
+    transform: scaleY(0);
+  }  
+
+  100%{
+    transform: scaleY(1);
+  }
 }

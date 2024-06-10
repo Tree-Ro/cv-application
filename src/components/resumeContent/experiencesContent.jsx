@@ -1,7 +1,6 @@
 function ExperiencesContent({ experienceFormContent }) {
 
   const experiences = experienceFormContent 
-  console.log(experiences)
 
   return (
     <>

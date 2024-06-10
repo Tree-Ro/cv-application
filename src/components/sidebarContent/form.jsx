@@ -29,37 +29,39 @@ function Form({ svgIcon, formData, setResumeContent, resumeContent }) {
         <img src={svgIcon} alt={`${formData.title} icon`}></img>
         <h2>{formData.title}</h2>
       </div>
-      {isOpened &&
-        <>
-          {formData.title !== 'General' && 
-              <AddedItems resumeMethods={[resumeContent, setResumeContent]} inputMethods={[inputValues, setInputValues]}/>
-          }
-          {formData.fields.map((field, index) => (
-            <FormField 
-              key={index}
-              title={field.title}
-              type={field.type}
-              placeholder={field.placeholder}
-              maxLength={field.maxLength}
+        {isOpened &&
+          <div className='form-content'>
+            {formData.title !== 'General' && 
+                <AddedItems resumeMethods={[resumeContent, setResumeContent]} inputMethods={[inputValues, setInputValues]}/>
+            }
+            {formData.fields.map((field, index) => (
+              <FormField 
+                key={index}
+                title={field.title}
+                type={field.type}
+                placeholder={field.placeholder}
+                maxLength={field.maxLength}
 
-              inputValues={inputValues}
-              setInputValues={setInputValues}
+                inputValues={inputValues}
+                setInputValues={setInputValues}
+              />
+            ))}
+            <div className='form-buttons'>
+            <FormButton 
+              title='Add'
+
+              callback={formData.title === 'General' ? setResumeContent : addResumeContent} 
+              formContent={inputValues} 
             />
-          ))}
-          <FormButton 
-            title='Add'
+            <FormButton 
+              title='Clear' 
 
-            callback={formData.title === 'General' ? setResumeContent : addResumeContent} 
-            formContent={inputValues} 
-          />
-          <FormButton 
-            title='Clear' 
-
-            callback={setInputValues} 
-            formContent={[]} 
-          />
-        </>
-      }
+              callback={setInputValues} 
+              formContent={[]} 
+            />
+            </div>
+          </div>
+        }
     </div>
 
   )
