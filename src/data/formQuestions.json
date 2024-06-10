@@ -6,7 +6,7 @@
         "title": "Full Name",
         "type": "text",
         "placeholder": "ex. John Doe",
-        "maxLength": 16
+        "maxLength": 25
       },
       {
         "title": "Email",
@@ -18,13 +18,13 @@
         "title": "Phone Number",
         "type": "number",
         "placeholder": "ex. 333-5555-22",
-        "maxLength": 16
+        "maxLength": 25
       },
       {
         "title": "Home Address",
         "type": "text",
         "placeholder": "15th Example Street",
-        "maxLength": 16
+        "maxLength": 25
       }
     ]
   },
@@ -35,25 +35,25 @@
         "title": "School Name",
         "type": "text",
         "placeholder": "ex. Lund University",
-        "maxLength": 16
+        "maxLength": 25
       },
       {
         "title": "Title of Study",
         "type": "text",
         "placeholder": "ex. Computer Science",
-        "maxLength": 16
+        "maxLength": 25
       },
       {
         "title": "Date From",
         "type": "date",
         "placeholder": "",
-        "maxLength": 16
+        "maxLength": 25
       },
       {
         "title": "Date Until",
         "type": "date",
         "placeholder": "",
-        "maxLength": 16
+        "maxLength": 25
       }
     ]
   },
@@ -64,19 +64,19 @@
         "title": "Company Name",
         "type": "text",
         "placeholder": "",
-        "maxLength": 16
+        "maxLength": 25
       },
       {
         "title": "Position Title",
         "type": "text",
         "placeholder": "",
-        "maxLength": 16
+        "maxLength": 25
       },
       {
         "title": "Location",
         "type": "text",
         "placeholder": "",
-        "maxLength": 16
+        "maxLength": 25
       },
       {
         "title": "Responsibilities",
@@ -88,13 +88,13 @@
         "title": "Date From",
         "type": "date",
         "placeholder": "",
-        "maxLength": 16
+        "maxLength": 25
       },
       {
         "title": "Date Until",
         "type": "date",
         "placeholder": "",
-        "maxLength": 16
+        "maxLength": 25
       }
     ]
   }

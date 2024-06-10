@@ -5,6 +5,12 @@
   --main-colour: rgb(14 116 144);
   --text-colour-light: white;
   --text-colour-night: black;
+
+  --resume-background-colour: white;
+  --main-background-colour: rgb(242, 247, 255);
+  
+  --resume-subheader-background: rgba(0, 255, 255, 0.2);
+  --resume-subheader-colour: rgb(20, 80, 100);
 }
 
 *,
@@ -20,6 +26,7 @@ html {
 }
 
 body {
+  background-color: var(--main-background-colour);
   box-sizing: border-box;
   height: 100%;
 
@@ -31,5 +38,7 @@ body {
 
 #root {
   display: grid;
-  grid-template-columns: minmax(250px, 500px) minmax(300px, 1000px);
+  grid-template-columns: minmax(max-content, 500px) minmax(min-content, 1000px);
+
+  height: 100%;
 }

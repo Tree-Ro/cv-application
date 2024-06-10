@@ -11,11 +11,11 @@ function Resume({ forms }) {
       <header className='general-content'>
         <PersonInfoContent generalFormContent={general}/>
       </header>
-      <section className='education'>
+      <section className='education-content'>
         <h2>Education</h2>
         <EducationContent educationFormContent={education}/>
       </section>
-      <section className='experiences'>
+      <section className='experiences-content'>
         <h2>Experiences</h2>
         <ExperiencesContent experienceFormContent={experience}/>
       </section>
