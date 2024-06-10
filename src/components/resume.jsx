@@ -12,9 +12,11 @@ function Resume({ forms }) {
         <PersonInfoContent generalFormContent={general}/>
       </header>
       <section className='education'>
+        <h2>Education</h2>
         <EducationContent educationFormContent={education}/>
       </section>
       <section className='experiences'>
+        <h2>Experiences</h2>
         <ExperiencesContent experienceFormContent={experience}/>
       </section>
     </div>

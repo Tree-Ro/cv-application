@@ -1,3 +1,35 @@
-@import url('./appStyles.css');
 @import url('./sidebarStyles.css');
-@import url('./formStyles.css');
+@import url('./resumeStyles.css');
+
+:root {
+  --main-colour: rgb(14 116 144);
+  --text-colour-light: white;
+  --text-colour-night: black;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100%;
+
+  font-family: -apple-system, 
+  BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen",
+  "Ubuntu","Cantarell","Fira Sans","Droid Sans",
+  "Helvetica Neue",sans-serif;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: minmax(250px, 500px) minmax(300px, 1000px);
+}
