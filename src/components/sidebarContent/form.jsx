@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import FormButton from './formButton' 
 import FormField from './formField'
+import AddedItems from './addedItems'
+
+import generateUniqueId from '../../scripts/generateUniqueId'
 
 function Form({ svgIcon, formData, setResumeContent, resumeContent }) {
   const [isOpened, setIsOpened] = useState(false)
@@ -11,11 +14,13 @@ function Form({ svgIcon, formData, setResumeContent, resumeContent }) {
   }
 
   function addResumeContent(newContent) {
-    let newResumeContent = resumeContent
-    newResumeContent.push(newContent)
+    const id = generateUniqueId(); 
+    const newResumeContent = [...resumeContent];
 
-    setResumeContent(newResumeContent)
-    setInputValues({})
+    newResumeContent.push({ ...newContent, id });
+    setResumeContent(newResumeContent);
+  
+    setInputValues({});
   }
 
   return (
@@ -26,11 +31,9 @@ function Form({ svgIcon, formData, setResumeContent, resumeContent }) {
       </div>
       {isOpened &&
         <>
-          {formData.title !== 'General' && resumeContent.map((item, index)=> (
-            <div key={index} className='added-item'>
-              <h4>{Object.values(item)[1] + ' - ' + Object.values(item)[0]}</h4> {/* Create a component out of this that allows you to edit the addition? */}
-            </div>
-          ))}
+          {formData.title !== 'General' && 
+              <AddedItems resumeContent={resumeContent} setResumeContent={setResumeContent}/>
+          }
           {formData.fields.map((field) => (
             <FormField 
               key={field.title}

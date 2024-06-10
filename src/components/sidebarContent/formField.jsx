@@ -1,10 +1,13 @@
-import { useState } from 'react'
+import toCamelCase from '../../scripts/formatCamelCase'
 
 function FormField({title, type, placeholder, maxLength='16', inputValues, setInputValues}) {
 
+  const camelCaseTitle = toCamelCase(title)
+  const value = camelCaseTitle in inputValues ? inputValues[camelCaseTitle] : ''
+
   function handleChange(e) {
     let newInput = { ...inputValues }
-    newInput[title] = e.target.value 
+    newInput[camelCaseTitle] = e.target.value 
     setInputValues(newInput)
   }
 
@@ -13,7 +16,7 @@ function FormField({title, type, placeholder, maxLength='16', inputValues, setIn
     type={type} 
     placeholder={placeholder} 
     maxLength={maxLength}
-    value={title in inputValues ? inputValues[title] : ''}
+    value={value}
 
     onChange={handleChange}
   />)
@@ -21,7 +24,7 @@ function FormField({title, type, placeholder, maxLength='16', inputValues, setIn
     <textarea 
     placeholder={placeholder} 
     maxLength={maxLength}
-    value={title in inputValues ? inputValues[title] : ''}
+    value={value}
 
     onChange={handleChange}
   />)

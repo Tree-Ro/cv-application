@@ -5,27 +5,22 @@ import locationIcon from '/location-dot-solid.svg'
 
 function PersonInfoContent({ generalFormContent }) {
 
-  const {
-    'Full Name': name,
-    'Email': email,
-    'Phone Number': phoneNumber,
-    'Home Address': homeAddress
-  } = generalFormContent
+  const { fullName, email, phoneNumber, homeAddress } = generalFormContent
 
   return (
     <>
-      <h1>{name}</h1>
+      <h1>{fullName ? fullName : 'N/A'}</h1>
       <div>
         <img src={mailIcon} alt="Email Icon" />
-        <p>{email}</p>
+        <p>{email ? email : 'N/A'}</p>
       </div>
       <div>
         <img src={phoneIcon} alt="Phone Icon" />
-        <p>{phoneNumber}</p>
+        <p>{phoneNumber ? phoneNumber : 'N/A'}</p>
       </div>
       <div>
         <img src={locationIcon} alt="Location Icon" />
-        <p>{homeAddress}</p>
+        <p>{homeAddress ? homeAddress : 'N/A'}</p>
       </div>
     </>
   )

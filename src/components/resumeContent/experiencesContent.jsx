@@ -6,12 +6,10 @@ function ExperiencesContent({ experienceFormContent }) {
   return (
     <>
       {experiences.map((experience)=> {
-        const { companyName, positionTitle, location, responsibilities, dateFrom, dateUntil } = experience
-        console.log({ companyName, positionTitle, location, responsibilities, dateFrom, dateUntil })
-        const key = `${companyName} + ${positionTitle}`
+        const { companyName, positionTitle, location, responsibilities, dateFrom, dateUntil, id } = experience
 
         return (
-          <div key={key} className='experiences'>
+          <div key={id} className='experiences'>
             <div>
               <p>{dateFrom ? dateFrom : 'N/A' + ' - ' + dateUntil ? dateUntil : 'N/A'}</p>
               <p>{location ? location : 'N/A'}</p>
