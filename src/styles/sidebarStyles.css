@@ -57,7 +57,6 @@ button {
   display: grid;
   grid-template-columns: max-content 1fr;
   grid-gap: 20px;
-
   align-items: center;
 
   padding: 15px;
@@ -69,6 +68,9 @@ button {
 }
 .form-header:hover {
   transform: scale(1.02);
+}
+.form-header h2 {
+  font-weight: 400;
 }
 .added-item {
   display: grid;
@@ -103,13 +105,16 @@ button {
 }
 .form-field input {
   padding: 5px;
-  border: solid var(--text-colour-night) 2px;
+  border: solid var(--text-colour-night) 1px;
   border-radius: 5px;
 }
 .form-field textarea {
   padding: 5px;
-  border: solid var(--text-colour-night) 2px;
+  border: solid var(--text-colour-night) 1px;
   border-radius: 5px;
+}
+.form-field h3 {
+  font-weight: 445;
 }
 .form-buttons {
   display: grid;
@@ -118,7 +123,7 @@ button {
   grid-gap: 20px;
 }
 .form-buttons button {
-  border: solid var(--text-colour-night) 3px;
+  border: solid var(--text-colour-night) 1px;
   padding: 3px;
   border-radius: 5px;
 

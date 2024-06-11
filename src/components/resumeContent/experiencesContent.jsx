@@ -15,8 +15,8 @@ function ExperiencesContent({ experienceFormContent }) {
             </div>
 
             <div>
-              <h2><b>{positionTitle ? positionTitle : 'N/A'}</b></h2>
-              <h3>{companyName ? companyName : 'N/A'}</h3>
+              <h3><b>{positionTitle ? positionTitle : 'N/A'}</b></h3>
+              <h4>{companyName ? companyName : 'N/A'}</h4>
               <p>{responsibilities ? responsibilities : 'N/A'}</p>
             </div>
           </div>

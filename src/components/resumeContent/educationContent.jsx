@@ -17,8 +17,8 @@ function EducationContent({ educationFormContent }) {
             </div>
 
             <div>
-              <h2 className='education-title'><b>{titleOfStudy ? titleOfStudy : 'N/A'}</b></h2>
-              <h3 className='education-school-name'>{schoolName ? schoolName : 'N/A'}</h3>
+              <h3 className='education-title'><b>{titleOfStudy ? titleOfStudy : 'N/A'}</b></h3>
+              <h4 className='education-school-name'>{schoolName ? schoolName : 'N/A'}</h4>
             </div>
           </div>
         );
