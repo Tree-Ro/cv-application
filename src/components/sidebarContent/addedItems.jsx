@@ -20,12 +20,11 @@ export default function AddedItems({ resumeMethods, inputMethods }) {
   return (
     <>
       {resumeContent.map((item)=> {
-        const values = Object.values(item)
         return(
         <div key={item.id} className='added-item'>
           <div className='item-description'>
-            <p><b>{values[0]}</b></p>
-            <p>{values[1]}</p>
+            <p><b>{item['schoolName'] || item['companyName'] || 'N/A'}</b></p>
+            <p>{item['titleOfStudy'] || item['positionTitle'] || 'N/A'}</p>
           </div>
           <div className='item-actions'>
             <img src="./trash-solid.svg" alt="Remove Item Icon" onClick={() => handleDelete(item.id)}/>

@@ -26,13 +26,13 @@ function App() {
 
   return (
     <>    
-    <Sidebar>
-      <Form svgIcon={personIcon} formData={generalFormQuestions} setResumeContent={setGeneralResumeContent} resumeContent={generalResumeContent}/>
-      <Form svgIcon={educationIcon} formData={educationFormQuestions} setResumeContent={setEducationResumeContent} resumeContent={educationResumeContent}/>
-      <Form svgIcon={workIcon} formData={experiencesFormQuestions} setResumeContent={setExperienceResumeContent} resumeContent={experienceResumeContent}/>
-    </Sidebar>
-    <Resume forms={[generalResumeContent, educationResumeContent, experienceResumeContent]}/>
-     </> 
+      <Sidebar>
+        <Form svgIcon={personIcon} formData={generalFormQuestions} setResumeContent={setGeneralResumeContent} resumeContent={generalResumeContent}/>
+        <Form svgIcon={educationIcon} formData={educationFormQuestions} setResumeContent={setEducationResumeContent} resumeContent={educationResumeContent}/>
+        <Form svgIcon={workIcon} formData={experiencesFormQuestions} setResumeContent={setExperienceResumeContent} resumeContent={experienceResumeContent}/>
+      </Sidebar>
+      <Resume forms={[generalResumeContent, educationResumeContent, experienceResumeContent]}/>
+    </> 
   )
 }
 

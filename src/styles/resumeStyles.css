@@ -2,7 +2,7 @@
   display: grid;
   grid-template-rows: max-content max-content 1fr;
 
-  width: 100%;
+  width: calc(100% - 50px);
   margin: 25px;
 
   box-shadow: gray 3px 3px 15px;
@@ -82,11 +82,35 @@ section > h2 {
       grid-template-rows: 1fr 1fr 1fr;
     }
 }
+@media only screen and (max-width: 400px)  {
+  .resume-wrapper {
+    margin: 5px;
+    width: calc(100% - 10px);
+  }
+
+  .resume-wrapper section{
+    padding: 10px;
+  } 
+
+  .resume-wrapper section > div {
+    gap: 10px;
+  }
+}
+
 
 @media print {
 
   header.general-content {
     color: black;
+    border: solid 2px black;
+  }
+
+  header.general-content .general-info img{
+    filter: invert(0);
+  }
+
+  section {
+    border: solid 2px black;
   }
 
   .resume-wrapper {

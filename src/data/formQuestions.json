@@ -63,37 +63,37 @@
       {
         "title": "Company Name",
         "type": "text",
-        "placeholder": "",
+        "placeholder": "ex. Inter IKEA Systems",
         "maxLength": 25
       },
       {
         "title": "Position Title",
         "type": "text",
-        "placeholder": "",
+        "placeholder": "Lead System Designer",
         "maxLength": 25
       },
       {
         "title": "Location",
         "type": "text",
-        "placeholder": "",
+        "placeholder": "Delft, Netherlands",
         "maxLength": 25
       },
       {
         "title": "Responsibilities",
         "type": "textarea",
-        "placeholder": "",
-        "maxLength": 300
+        "placeholder": "ex. Led the design and implementation of systems architecture [...]",
+        "maxLength": 80
       },
       {
         "title": "Date From",
         "type": "date",
-        "placeholder": "",
+        "placeholder": "ex. 2020-01-01",
         "maxLength": 25
       },
       {
         "title": "Date Until",
         "type": "date",
-        "placeholder": "",
+        "placeholder": "ex. 2023-12-31",
         "maxLength": 25
       }
     ]

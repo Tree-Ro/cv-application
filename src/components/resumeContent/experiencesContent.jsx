@@ -10,7 +10,7 @@ function ExperiencesContent({ experienceFormContent }) {
         return (
           <div key={id} className='experiences'>
             <div>
-              <p>{dateFrom ? dateFrom : 'N/A' + ' - ' + dateUntil ? dateUntil : 'N/A'}</p>
+              <p>{dateFrom ? dateFrom : 'N/A'} / {dateUntil ? dateUntil : 'N/A'}</p>
               <p>{location ? location : 'N/A'}</p>
             </div>
 

@@ -11,7 +11,7 @@ function EducationContent({ educationFormContent }) {
           <div key={id} className='education'>
             <div>
               <p className='education-duration'>
-                {dateFrom ? dateFrom : 'N/A'} - {dateUntil ? dateUntil : 'N/A'}
+                {dateFrom ? dateFrom : 'N/A'} / {dateUntil ? dateUntil : 'N/A'}
               </p>
               <p className='education-location'>{homeAddress ? homeAddress : 'N/A'}</p>
             </div>
