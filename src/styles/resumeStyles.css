@@ -34,8 +34,9 @@ header.general-content .general-info {
 header.general-content .general-info div {
   display: flex;
   gap: 10px;
-
   align-items: center;
+
+  margin: 5px;
 }
 header.general-content .general-info img{
   height: 24px;
